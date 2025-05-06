@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 import Footer from "../../components/Footer";
-import ButtonToNavigate from "./components/ButtonToProviderPage";
+import ButtonToNavigate from "./components/ButtonToNavigate";
 
 const Welcome = () => { 
   const navigate = useNavigate();
