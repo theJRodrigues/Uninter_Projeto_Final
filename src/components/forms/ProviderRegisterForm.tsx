@@ -2,7 +2,7 @@ import { z } from "zod";
 import Input from "./Input";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { providerSchema } from "../constants/ProviderSchema";
+import { providerSchema } from "../../constants/ProviderSchema";
 
 type formSchema = z.infer<typeof providerSchema>;
 

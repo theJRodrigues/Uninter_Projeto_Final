@@ -3,7 +3,7 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Input from "./Input";
-import { patientSchema } from "../constants/PatientSchema";
+import { patientSchema } from "../../constants/PatientSchema";
 
 
 

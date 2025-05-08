@@ -3,26 +3,22 @@ import Footer from '../../components/Footer';
 import ActionButton from '../../components/ActionButton';
 import { useNavigate } from 'react-router';
 import { routes } from '../../constants/Routes';
-import BackToButton from '../../components/BackToButton';
+import BackToHomeButton from '../../components/BackToHomeButton';
 import ProviderRegisterForm from '../../components/forms/ProviderRegisterForm';
 import PatientRegisterForm from '../../components/forms/PatientRegisterForm';
 
-const Register = () => {
+const RegisterPage = () => {
   const registerOptions = {
     provider: "provider",
     patient: "patient"
   }
   const [registerOpt, setRegisterOpt] = useState('');
   const navigate = useNavigate();
-  const { home, login } = routes;
+  const { login } = routes;
   
   const handleLoginBtn = () =>{
     console.log("teste")
     navigate(login)
-  }
-  
-  const handleClickBackToHome = () =>{
-    navigate(home)
   }
   
   const handleProviderForm = () =>{
@@ -32,11 +28,12 @@ const Register = () => {
   const handlePatientForm = () =>{
     setRegisterOpt(registerOptions.patient);
   }
+  
   return (
     <>
       <div className='flex flex-col min-h-svh bg-gradient-to-t from-blue-200 to-white'>
         <header className='flex justify-between items-center p-2'>
-          <BackToButton handleClick= {handleClickBackToHome} />
+          <BackToHomeButton />
           <ActionButton text='Faça Login' action={handleLoginBtn}/>
         </header>
         <main className='grow flex items-center p-2'>
@@ -72,4 +69,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default RegisterPage;
