@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
 import Footer from "../../components/Footer";
-import ButtonToNavigate from "./components/ButtonToNavigate";
 import { routes } from "../../constants/Routes";
+import ActionButton from "../../components/ActionButton";
 
 const Home = () => { 
   const navigate = useNavigate();
@@ -26,15 +26,15 @@ const Home = () => {
         
         <section className="text-white space-y-2 flex flex-col items-center">
           <div className="flex gap-2 justify-center">
-            <ButtonToNavigate 
-            handleClick={navigateToRegister} 
-            text="Cadastre-se" />   
+            <ActionButton 
+            action={navigateToRegister} 
+            text="Cadastre-se"
+            className="bg-green-600 hover:bg-green-700" />   
             
-            <ButtonToNavigate 
-            handleClick={navigateToLogin} 
-            text="Faça Login" 
-            className="bg-blue-600 hover:bg-blue-700"/>
-          </div>
+            <ActionButton 
+            action={navigateToLogin} 
+            text="Faça Login" />
+            </div>
         </section>
       </section>
     </main>  
