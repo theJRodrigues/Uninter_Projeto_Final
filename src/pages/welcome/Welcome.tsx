@@ -27,20 +27,22 @@ const Welcome = () => {
         </hgroup>
         <p>Conectando pacientes e profissionais com agilidade</p>
         
-        <section className="space-x-5 text-white space-y-2">
-          <ButtonToNavigate 
-          handleClick={navigateToProviderPage} 
-          text="Prestador" />   
-           
-          <ButtonToNavigate 
-          handleClick={navigateToPatientPage} 
-          text="Paciente" 
-          className="bg-blue-600 hover:bg-blue-700"/>
+        <section className="text-white space-y-2 flex flex-col items-center">
+          <div className="flex gap-2 justify-center">
+            <ButtonToNavigate 
+            handleClick={navigateToProviderPage} 
+            text="Prestador" />   
+            
+            <ButtonToNavigate 
+            handleClick={navigateToPatientPage} 
+            text="Paciente" 
+            className="bg-blue-600 hover:bg-blue-700"/>
+          </div>
           
           <ButtonToNavigate 
           handleClick={navigateToAdminPage}
           text="Administrador"
-          className="bg-gray-600 hover:bg-gray-700 block m-auto"/>
+          className="bg-gray-600 hover:bg-gray-700"/>
         </section>
       </section>
     </main>  

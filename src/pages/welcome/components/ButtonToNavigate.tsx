@@ -5,7 +5,7 @@ interface ButtonToNavigate extends React.ButtonHTMLAttributes<HTMLButtonElement>
 }
 
 const ButtonToNavigate = ({ handleClick, text, ...props }: ButtonToNavigate) => {
-  const className = twMerge("bg-green-600 py-2 px-3 rounded w-[200px] hover:bg-green-700 cursor-pointer", props.className);
+  const className = twMerge("bg-green-600 py-1 px-3 rounded w-[200px] hover:bg-green-700 cursor-pointer", props.className);
   
   return (
     <button
