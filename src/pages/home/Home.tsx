@@ -1,20 +1,17 @@
 import { useNavigate } from "react-router";
 import Footer from "../../components/Footer";
 import ButtonToNavigate from "./components/ButtonToNavigate";
+import { routes } from "../../constants/Routes";
 
-const Welcome = () => { 
+const Home = () => { 
   const navigate = useNavigate();
-  
-  const navigateToPatientPage = () => {
-    navigate("/patient")
+  const {login, register} = routes
+  const navigateToLogin = () => {
+    navigate(login)
   };
   
-  const navigateToAdminPage = () => {
-    navigate("/admin")
-  };
-  
-  const navigateToProviderPage = () => {
-    navigate("/provider")
+  const navigateToRegister = () => {
+    navigate(register)
   };
   
   return (
@@ -30,19 +27,14 @@ const Welcome = () => {
         <section className="text-white space-y-2 flex flex-col items-center">
           <div className="flex gap-2 justify-center">
             <ButtonToNavigate 
-            handleClick={navigateToProviderPage} 
-            text="Prestador" />   
+            handleClick={navigateToRegister} 
+            text="Cadastre-se" />   
             
             <ButtonToNavigate 
-            handleClick={navigateToPatientPage} 
-            text="Paciente" 
+            handleClick={navigateToLogin} 
+            text="Faça Login" 
             className="bg-blue-600 hover:bg-blue-700"/>
           </div>
-          
-          <ButtonToNavigate 
-          handleClick={navigateToAdminPage}
-          text="Administrador"
-          className="bg-gray-600 hover:bg-gray-700"/>
         </section>
       </section>
     </main>  
@@ -51,4 +43,4 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+export default Home;

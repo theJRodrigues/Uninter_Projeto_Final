@@ -1,16 +1,17 @@
 import { Route, Routes } from "react-router";
-import Welcome from "./pages/welcome/Welcome";
-import Provider from "./pages/provider/Provider";
+import Home from "./pages/home/Home"
 import Patient from "./pages/patient/Patient";
+import Register from "./pages/register/RegisterForm";
+import { routes } from "./constants/Routes";
 
 function App() {
+  const { home, login, register } = routes;
   return (
     <>
       <Routes>
-        <Route path="/" element={<Welcome />} />
-        <Route path="/patient" element={<Patient />} />
-        <Route path="/provider" element={<Provider />} />
-        <Route path="/admin" element={<Welcome />} />
+        <Route path={home} element={<Home />} />
+        {/* <Route path={login} element={<Patient />} /> */}
+        <Route path={register} element={<Register />} />
       </Routes>
     </>
   )

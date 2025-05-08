@@ -5,7 +5,7 @@ import ActionButton from "../../components/ActionButton";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router";
 import LoginForm from "../../components/LoginForm";
-import PatientRegisterForm from "./components/RegisterFormPatient";
+import PatientRegisterForm from "../../components/RegisterFormPatient";
 
 const Patient = () => {
   const [formOption, setFormOption] = useState("register");

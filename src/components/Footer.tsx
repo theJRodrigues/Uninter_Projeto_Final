@@ -1,13 +1,15 @@
 const Footer = () => {
   return (
-    <footer className="bg-blue-800 text-center py-0.5 text-white relative">
-      <p>Jean Gabriel Rodrigues.</p>
-      <p>2025.</p>
+    <footer className="bg-gray-800 text-sm py-0.5 px-2 text-white flex justify-between items-center">
+      <section>
+        <p>Jean Gabriel Rodrigues.</p>
+        <p>2025.</p>
+      </section>
       <section>
         <a 
           href="https://github.com/theJRodrigues/Uninter_Projeto_Final" 
           target='_blank'
-          className="absolute top-1 right-4"
+          className=""
         >
             Repositório Github
         </a>

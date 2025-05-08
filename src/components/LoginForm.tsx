@@ -31,7 +31,7 @@ const LoginForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col space-y-3 p-4 rounded text-sm bg-white ring-1 ring-black w-full mx-auto"
+      className="flex flex-col space-y-3 p-4 rounded text-sm bg-white ring-1 ring-black w-full mx-auto relative"
     >
       <h1 className="text-center text-2xl font-bold">Login</h1>
 
@@ -49,7 +49,8 @@ const LoginForm = () => {
         placeholder="********"
         errorMessage={errors.password?.message}
       />
-
+      
+      
       <button
         type="submit"
         className="w-full mt-2 px-2 py-1 rounded text-white cursor-pointer bg-blue-600 hover:bg-blue-700"
