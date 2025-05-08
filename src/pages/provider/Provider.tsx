@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Footer from "../../components/Footer";
 import ActionButton from "../../components/ActionButton";
-import RegisterFormProvider from "./components/Provider";
+import RegisterFormProvider from "./components/RegisterFormProvider";
 import LoginForm from "../../components/LoginForm";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router";
