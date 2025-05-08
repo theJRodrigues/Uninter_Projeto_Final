@@ -1,10 +1,14 @@
 import { useState } from "react";
 import Footer from "../../components/Footer";
-import ActionButton from "./components/ActionButton";
-import RegisterForm from "./components/RegisterForm";
+import ActionButton from "../../components/ActionButton";
+import RegisterFormProvider from "./components/Provider";
+import LoginForm from "../../components/LoginForm";
+import { ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router";
 
 const Provider = () => {
-  const [formOption, setFormOption] = useState('');
+  const [formOption, setFormOption] = useState('register');
+  const navigate = useNavigate();
   
   const handleFormOptionChange = (option: string) => {
     setFormOption(option);
@@ -12,9 +16,14 @@ const Provider = () => {
   
   return (
     <>
+      <button
+       className="p-2 absolute cursor-pointer" 
+        onClick={() => navigate("/")}>
+        <ArrowLeft size={30}/>
+      </button>
       <div className="flex flex-col min-h-dvh bg-gradient-to-t from-blue-200 to-white">
         <main className="grow flex items-center  max-w-[1900px] m-auto">
-          <section className="w-[50%] p-10">
+          <section className="w-[50%] p-3">
             <section>
               <h1 className="text-4xl font-bold text-gray-800 mb-4 w-[70%]">
                 Área do Prestador de Serviços da Saúde
@@ -39,9 +48,9 @@ const Provider = () => {
             </section>
           </section>
           
-          <section className="w-[50%] ">
-            <div className="w-full max-w-130 shadow-2xl h-160 mx-auto rounded">
-              { formOption === 'register' ? <RegisterForm/> : null }
+          <section className="w-[50%] p-2 ">
+            <div className="w-full max-w-60 shadow-2xl mx-auto rounded">
+              { formOption === 'register' ? <RegisterFormProvider/> : formOption === "login" ? <LoginForm/> : null}
             </div>
           </section>
         </main>
