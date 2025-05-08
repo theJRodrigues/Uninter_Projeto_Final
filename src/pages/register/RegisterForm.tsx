@@ -4,8 +4,8 @@ import ActionButton from '../../components/ActionButton';
 import { useNavigate } from 'react-router';
 import { routes } from '../../constants/Routes';
 import BackToButton from '../../components/BackToButton';
-import ProviderRegisterForm from '../../components/ProviderRegisterForm';
-import PatientRegisterForm from '../../components/PatientRegisterForm';
+import ProviderRegisterForm from '../../components/forms/ProviderRegisterForm';
+import PatientRegisterForm from '../../components/forms/PatientRegisterForm';
 
 const Register = () => {
   const registerOptions = {
