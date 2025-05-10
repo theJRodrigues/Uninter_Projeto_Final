@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import Input from "../../Input";
+import Input from "../../../Input";
 import { zodResolver } from "@hookform/resolvers/zod/src/zod.js";
 
 const emailSchema = z.object({
@@ -47,7 +47,7 @@ const CheckEmailForm = ({ onClose, nextStep }: CheckEmailFormProps) => {
         <button
           onClick={onClose}
           type="button"
-          className="text-sm text-white bg-red-600 hover:bg-red-700 cursor-pointer px-2 rounded"
+          className="text-sm text-gray-600 hover:text-gray-900 cursor-pointer"
         >
           Cancelar
         </button>
