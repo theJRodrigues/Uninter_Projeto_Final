@@ -24,6 +24,7 @@ const CheckEmailForm = ({ onClose, nextStep }: CheckEmailFormProps) => {
   });
 
   const onSubmit = (data: emailForm) => {
+    console.log(data);
     console.log("Codigo enviado");
     nextStep();
   };

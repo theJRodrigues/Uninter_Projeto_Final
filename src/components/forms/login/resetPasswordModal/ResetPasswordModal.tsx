@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CheckEmailForm from "./CheckEmailModal";
+import CheckEmailForm from "./CheckEmailForm";
 const Steps = {
   checkEmail: 1,
   verifyCode: 2,
