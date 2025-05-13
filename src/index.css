@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
-
-@theme{
+@theme {
     --spacing: 10px;
+}
+
+a.active {
+    @apply bg-blue-700;
 }

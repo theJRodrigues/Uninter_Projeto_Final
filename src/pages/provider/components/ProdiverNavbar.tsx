@@ -9,6 +9,7 @@ const ProviderNavbar = () => {
       <NavLink
         to={"/" + provider.index}
         className="px-2 py-1 hover:bg-blue-700 rounded  flex items-center gap-1"
+        end
       >
         <Home />
         Home
@@ -16,35 +17,40 @@ const ProviderNavbar = () => {
       <NavLink
         to={`/${provider.index}/${provider.services}`}
         className="px-2 py-1 hover:bg-blue-700 rounded  flex items-center gap-1"
+        end
       >
         <Clipboard />
         Atendimentos
       </NavLink>
       <NavLink
-        to={`/${provider.index}/${provider.services}`}
+        to={`/${provider.index}/${provider.calendar}`}
         className="px-2 py-1 hover:bg-blue-700 rounded  flex items-center gap-1"
+        end
       >
         <Calendar />
         Agenda
       </NavLink>
       <NavLink
-        to={`/${provider.index}/${provider.services}`}
+        to={`/${provider.index}/${provider.patients}`}
         className="px-2 py-1 hover:bg-blue-700 rounded  flex items-center gap-1"
+        end
       >
         <UserRound />
         Pacientes
       </NavLink>
 
       <NavLink
-        to={`/${provider.index}/${provider.services}`}
+        to={`/${provider.index}/${provider.institution}`}
         className="px-2 py-1 hover:bg-blue-700 rounded  flex items-center gap-1 whitespace-nowrap"
+        end
       >
         <ShieldPlus />
         Minha Instituição
       </NavLink>
       <NavLink
-        to={`/${provider.index}/${provider.services}`}
+        to={`/${provider.index}/${provider.settings}`}
         className="px-2 py-1 hover:bg-blue-700 rounded  flex items-center gap-1"
+        end
       >
         <Settings />
         Configurações
@@ -52,6 +58,7 @@ const ProviderNavbar = () => {
       <NavLink
         to={`/${provider.index}/${provider.services}`}
         className="px-2 py-1 hover:bg-blue-700 rounded  flex items-center gap-1"
+        end
       >
         <Power />
         Sair
