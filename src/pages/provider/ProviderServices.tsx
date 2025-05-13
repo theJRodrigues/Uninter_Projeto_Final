@@ -1,7 +1,7 @@
-import * as React from "react";
+import ProviderAsideMenu from "./components/ProviderAsideMenu";
 
 const ProviderServices = () => {
-  return <div>Ola mundo</div>;
+  return <ProviderAsideMenu />;
 };
 
 export default ProviderServices;

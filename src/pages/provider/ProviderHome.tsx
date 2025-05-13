@@ -1,19 +1,13 @@
-import Footer from "../../components/Footer";
-import ProviderNavbar from "./components/ProdiverNavbar";
+import ProviderAsideMenu from "./components/ProviderAsideMenu";
 
 const ProviderHome = () => {
   return (
-    <>
-      <header>
-        <button>Perfil</button>
-        <button>Sair</button>
-      </header>
-      <aside>
-        <ProviderNavbar />
-      </aside>
-      <main></main>
-      <Footer />
-    </>
+    <div className="flex min-h-dvh ">
+      <ProviderAsideMenu />
+      <main className="w-full">
+        <h1>ola mundo</h1>
+      </main>
+    </div>
   );
 };
 
