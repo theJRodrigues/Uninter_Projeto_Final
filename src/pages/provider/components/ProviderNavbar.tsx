@@ -15,7 +15,7 @@ const ProviderNavbar = () => {
         Home
       </NavLink>
       <NavLink
-        to={`/${provider.index}/${provider.services}`}
+        to={`/${provider.index}/${provider.appointments}`}
         className="px-2 py-1 hover:bg-blue-700 rounded  flex items-center gap-1"
         end
       >
@@ -55,14 +55,10 @@ const ProviderNavbar = () => {
         <Settings />
         Configurações
       </NavLink>
-      <NavLink
-        to={`/${provider.index}/${provider.services}`}
-        className="px-2 py-1 hover:bg-blue-700 rounded  flex items-center gap-1"
-        end
-      >
+      <button className="px-2 py-1 hover:bg-blue-700 rounded  flex items-center gap-1">
         <Power />
         Sair
-      </NavLink>
+      </button>
     </nav>
   );
 };

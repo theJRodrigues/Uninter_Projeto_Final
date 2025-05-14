@@ -10,7 +10,7 @@ const LoginPage = () => {
   const { register } = routes;
 
   const handleRegisterBtn = () => {
-    navigate(register);
+    navigate("/" + register);
   };
 
   return (

@@ -4,7 +4,7 @@ import { routes } from "../../constants/Routes";
 
 const ProviderHome = () => {
   const navigate = useNavigate();
-  const articleStyle = "ring ring-gray-400 rounded p-3 cursor-pointer";
+  const articleStyle = "ring ring-gray-400 rounded p-3 cursor-pointer max-w-50 hover:ring-blue-600";
   const { provider } = routes;
 
   const navigateTo = (route: string) => {
@@ -22,19 +22,19 @@ const ProviderHome = () => {
         </section>
 
         <section className="grid grid-cols-2 grid-rows-2 gap-5">
-          <article className={articleStyle} onClick={() => navigateTo(provider.services)}>
+          <article className={articleStyle} onClick={() => navigateTo(provider.appointments)}>
             <h1 className="font-bold text-lg">Atendimentos</h1>
             <p>Visualize e organize os atendimentos realizados</p>
           </article>
-          <article className={articleStyle} onClick={() => navigateTo(provider.services)}>
+          <article className={articleStyle} onClick={() => navigateTo(provider.appointments)}>
             <h1 className="font-bold text-lg">Agenda</h1>
             <p>Consulte e marque consultas na sua agenda</p>
           </article>
-          <article className={articleStyle} onClick={() => navigateTo(provider.services)}>
+          <article className={articleStyle} onClick={() => navigateTo(provider.appointments)}>
             <h1 className="font-bold text-lg">Pacientes</h1>
             <p>Acesse os dados e históricos dos pacientes</p>
           </article>
-          <article className={articleStyle} onClick={() => navigateTo(provider.services)}>
+          <article className={articleStyle} onClick={() => navigateTo(provider.appointments)}>
             <h1 className="font-bold text-lg">Minha Instituição</h1>
             <p>Atualize as informações da sua instituição de saúde</p>
           </article>

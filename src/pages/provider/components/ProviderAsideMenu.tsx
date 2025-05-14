@@ -1,4 +1,4 @@
-import ProviderNavbar from "./ProdiverNavbar";
+import ProviderNavbar from "./ProviderNavbar";
 
 const ProviderAsideMenu = () => {
   return (

@@ -4,7 +4,7 @@ export const routes = {
   login: "login",
   provider: {
     index: "provider",
-    services: "services",
+    appointments: "appointments",
     calendar: "calendar",
     patients: "patients",
     institution: "institution",

@@ -18,7 +18,7 @@ const RegisterPage = () => {
 
   const handleLoginBtn = () => {
     console.log("teste");
-    navigate(login);
+    navigate("/" + login);
   };
 
   const handleProviderForm = () => {
