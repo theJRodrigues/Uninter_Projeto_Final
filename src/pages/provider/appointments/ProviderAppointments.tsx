@@ -15,7 +15,6 @@ const ProviderAppointments = () => {
   };
 
   const handlePeriodChange = (newPeriod: periods) => {
-    console.log(periodFilter);
     setPeriodFilter(newPeriod);
   };
 
@@ -31,7 +30,7 @@ const ProviderAppointments = () => {
           <AppointmentPeriodFilter period={periodFilter} onChange={handlePeriodChange} />
           <AppointmentQueryFilter queryFilter={queryFilter} onChange={handleFilterChange} />
         </section>
-        <AppointmentsTable filters={queryFilter} />
+        <AppointmentsTable periodFilter={periodFilter} queryFilter={queryFilter} />
       </main>
     </div>
   );
