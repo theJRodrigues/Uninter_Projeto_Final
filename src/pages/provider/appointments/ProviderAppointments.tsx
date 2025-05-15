@@ -1,6 +1,6 @@
 import { useState } from "react";
 import AppointmentQueryFilter from "./components/AppointmentQueryFilter";
-import AppointmentsTable from "./components/AppointmentsTable";
+import AppointmentsTable from "./components/appointmentTable/AppointmentsTable";
 import ProviderAsideMenu from "../components/ProviderAsideMenu";
 import AppointmentPeriodFilter from "./components/AppointmentPeriodFilter";
 

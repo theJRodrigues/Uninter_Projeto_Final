@@ -1,5 +1,6 @@
-import type { periods } from "../ProviderAppointments";
+import type { periods } from "../../ProviderAppointments";
 import { compareAsc, isSameDay, isSameMonth, isSameWeek, parseISO } from "date-fns";
+import AppointmentTBody from "./AppointmentTBody";
 
 interface AppointmentsTableProps {
   queryFilter: string;
@@ -40,7 +41,7 @@ const AppointmentsTable = ({ queryFilter, periodFilter }: AppointmentsTableProps
   });
 
   return (
-    <div>
+    <>
       <table className="min-w-full bg-white border border-gray-200">
         <thead className="bg-gray-100">
           <tr>
@@ -53,32 +54,17 @@ const AppointmentsTable = ({ queryFilter, periodFilter }: AppointmentsTableProps
         </thead>
         <tbody>
           {sortedDatas.map((row) => (
-            <tr key={row.id} className="border border-gray-500">
-              <td className="px-1 py-1">{row.patient}</td>
-              <td className="px-1 py-1">{row.date}</td>
-              <td className="px-1 py-1">{row.time}</td>
-              <td className="px-1 py-1">
-                <span
-                  className={`text-sm font-medium px-1 py-1 rounded-full ${
-                    row.status === "Realizado"
-                      ? "bg-green-100 text-green-700"
-                      : row.status === "Agendado"
-                        ? "bg-blue-100 text-blue-700"
-                        : "bg-red-100 text-red-700"
-                  }`}
-                >
-                  {row.status}
-                </span>
-              </td>
-              <td className="px-1 py-1 space-x-2">
-                <button className="text-sm text-blue-600 hover:underline cursor-pointer">Ver</button>
-                <button className="text-sm text-gray-600 hover:underline cursor-pointer">Editar</button>
-              </td>
-            </tr>
+            <AppointmentTBody
+              key={row.id}
+              date={row.date}
+              patient={row.patient}
+              status={row.status}
+              time={row.time}
+            />
           ))}
         </tbody>
       </table>
-    </div>
+    </>
   );
 };
 
