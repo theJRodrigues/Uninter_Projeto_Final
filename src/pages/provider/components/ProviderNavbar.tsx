@@ -1,6 +1,6 @@
 import { NavLink } from "react-router";
 import { routes } from "../../../constants/Routes";
-import { Calendar, Clipboard, Home, Power, Settings, ShieldPlus, UserRound } from "lucide-react";
+import { Calendar, Clipboard, Home, Power, ShieldPlus, UserRound } from "lucide-react";
 
 const ProviderNavbar = () => {
   const { provider } = routes;
@@ -47,14 +47,7 @@ const ProviderNavbar = () => {
         <ShieldPlus />
         Minha Instituição
       </NavLink>
-      <NavLink
-        to={`/${provider.index}/${provider.settings}`}
-        className="px-2 py-1 hover:bg-blue-700 rounded  flex items-center gap-1"
-        end
-      >
-        <Settings />
-        Configurações
-      </NavLink>
+
       <button className="px-2 py-1 hover:bg-blue-700 rounded  flex items-center gap-1">
         <Power />
         Sair

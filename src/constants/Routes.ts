@@ -8,6 +8,5 @@ export const routes = {
     agenda: "agenda",
     patients: "patients",
     institution: "institution",
-    settings: "settings",
   },
 };
