@@ -51,17 +51,17 @@ const AppointmentViewModal = ({ patientName, date, time, status, onClose }: Appo
       >
         <label className="flex flex-col gap-0.5">
           Paciente
-          <input {...register("patientName")} className={inputDefaultStyle} readOnly />
+          <input {...register("patientName")} className={inputDefaultStyle} />
         </label>
 
         <fieldset className="flex gap-4 mb-2">
           <label className="flex flex-col gap-1">
             Data
-            <input type="date" {...register("date")} className={inputDefaultStyle} readOnly />
+            <input type="date" {...register("date")} className={inputDefaultStyle} />
           </label>
           <label className="flex flex-col gap-1">
             Hora
-            <input type="time" {...register("time")} className={inputDefaultStyle} readOnly />
+            <input type="time" {...register("time")} className={inputDefaultStyle} />
           </label>
           <label className="flex flex-col gap-1 ml-auto">
             Status

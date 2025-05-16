@@ -1,4 +1,3 @@
-// PatientListPage.tsx
 import { useState } from "react";
 import PatientList from "./PatientList";
 import ProviderAsideMenu from "../components/ProviderAsideMenu";

@@ -1,9 +1,11 @@
 import { NavLink } from "react-router";
 import { routes } from "../../../constants/Routes";
 import { Calendar, Clipboard, Home, Power, ShieldPlus, UserRound } from "lucide-react";
+import { useNavigate } from "react-router";
 
 const ProviderNavbar = () => {
   const { provider } = routes;
+  const navigate = useNavigate();
   return (
     <nav className="flex flex-col gap-1 text-white font-sans ">
       <NavLink
@@ -48,7 +50,10 @@ const ProviderNavbar = () => {
         Minha Instituição
       </NavLink>
 
-      <button className="px-2 py-1 hover:bg-blue-700 rounded  flex items-center gap-1">
+      <button
+        className="px-2 py-1 hover:bg-blue-700 rounded  flex items-center gap-1 cursor-pointer"
+        onClick={() => navigate("/")}
+      >
         <Power />
         Sair
       </button>
