@@ -5,7 +5,7 @@ export const routes = {
   provider: {
     index: "provider",
     appointments: "appointments",
-    calendar: "calendar",
+    agenda: "agenda",
     patients: "patients",
     institution: "institution",
     settings: "settings",

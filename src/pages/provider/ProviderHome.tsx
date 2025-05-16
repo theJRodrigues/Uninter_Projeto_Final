@@ -26,7 +26,7 @@ const ProviderHome = () => {
             <h1 className="font-bold text-lg">Atendimentos</h1>
             <p>Visualize e organize os atendimentos realizados</p>
           </article>
-          <article className={articleStyle} onClick={() => navigateTo(provider.appointments)}>
+          <article className={articleStyle} onClick={() => navigateTo(provider.agenda)}>
             <h1 className="font-bold text-lg">Agenda</h1>
             <p>Consulte e marque consultas na sua agenda</p>
           </article>

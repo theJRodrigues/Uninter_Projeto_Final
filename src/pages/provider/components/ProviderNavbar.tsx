@@ -23,7 +23,7 @@ const ProviderNavbar = () => {
         Atendimentos
       </NavLink>
       <NavLink
-        to={`/${provider.index}/${provider.calendar}`}
+        to={`/${provider.index}/${provider.agenda}`}
         className="px-2 py-1 hover:bg-blue-700 rounded  flex items-center gap-1"
         end
       >
