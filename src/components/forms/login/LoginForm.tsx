@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import ResetPasswordModal from "./resetPasswordModal/ResetPasswordModal";
 import { useState } from "react";
+import { useNavigate } from "react-router";
+import { routes } from "../../../constants/Routes";
 
 const loginSchemaZod = z.object({
   email: z.string().nonempty("Obrigatório").email({ message: "E-mail inválido" }),
@@ -22,6 +24,9 @@ const LoginForm = () => {
     resolver: zodResolver(loginSchemaZod),
   });
   const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
+  const { provider } = routes;
+
   const onCloseModal = () => {
     setShowModal(false);
   };
@@ -30,6 +35,7 @@ const LoginForm = () => {
   };
   const onSubmit = (data: LoginSchema) => {
     console.log("Login data:", data);
+    navigate("/" + provider.index);
   };
 
   return (
@@ -39,6 +45,7 @@ const LoginForm = () => {
         className="flex flex-col space-y-3 p-4 rounded text-sm bg-white ring-1 ring-black w-full mx-auto relative"
       >
         <h1 className="text-center text-2xl font-bold">Login</h1>
+        <p>Insira qualquer informação para acessar</p>
 
         <Input
           {...register("email")}
